@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STT-1500",
+    "section": "",
+    "text": "Présentation\nLes documents présentés sur ce site concernent le cours STT-1500 : Probabilités, enseigné à l’Université Laval. Pour formuler des commentaires, écrivez-moi: jerome.soucy@mat.ulaval.ca."
+  },
+  {
+    "objectID": "Examen2.html#question-1",
+    "href": "Examen2.html#question-1",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 1",
+    "text": "Question 1\nConvenons de représenter le montant (en dollars) de l’avoir d’une personne choisie au hasard dans un groupe par la variable aléatoire \\(X\\). Une valeur de \\(X\\) négative devra être interprétée comme une dette. On estime que la densité de probabilité de \\(X\\) est donnée par \\[f(x)=\\begin{cases}\n        \\frac{x}{50^2}\\exp\\left(-\\frac{x^2}{50^2}\\right)& \\text{si $x\\geq 0$},\\\\[10pt]\n        -\\frac{x}{50^2}\\exp\\left(-\\frac{x^2}{50^2}\\right)& \\text{si $x&lt; 0$}.\n        \\end{cases}\\] Quelle est la probabilité que la personne ait un avoir dans l’intervalle \\(]-50,100[\\)?\n\nSolution. En posant \\(u=-\\frac{x^2}{50^2}\\), nous avons que \\(-\\frac{1}{2}du=\\frac{x\\,dx}{50^2}\\). On trouve ainsi que \\(-\\frac{1}{2}\\exp\\left(-\\frac{x^2}{50^2}\\right)\\) est une primitive de \\(\\frac{x}{50^2}\\exp\\left(-\\frac{x^2}{50^2}\\right)\\). Notons cette primitive \\(H(x)\\). Ainsi,\n\\[\\begin{align*}\n\\mathbb{P}(-50&lt;X&lt;100)&=\\int_{-50}^{100}f(x)dx\\\\[10pt]\n                    &=-\\int_{-50}^{0}\\frac{x}{50^2}e^{-\\frac{x^2}{50^2}}dx+\\int_{0}^{100}\\frac{x}{50^2}e^{-\\frac{x^2}{50^2}}dx\\\\[10pt]\n                    &=-\\left(H(0)-H(-50)\\right)+H(100)-H(0)\\\\[10pt]\n                    &=H(100)+H(-50)-2H(0)\\\\[10pt]\n                    &=-\\frac{1}{2}e^{-4}-\\frac{1}{2}e^{-1}+1\\\\[10pt]\n                    &\\approx 0,8069.\n\\end{align*}\\] Remarque. On peut aussi trouver \\(F(x)\\), la fonction de répartition de \\(X\\). En intégrant de la même manière, on obtient que \\[F(x)=\\int_{-\\infty}^x f(x)dx=\\begin{cases}\n        1-\\frac{1}{2}\\exp\\left(-\\frac{x^2}{50^2}\\right)& \\text{si $x\\geq 0$},\\\\[10pt]\n        \\frac{1}{2}\\exp\\left(-\\frac{x^2}{50^2}\\right)& \\text{si $x&lt; 0$}.\n        \\end{cases}\\] On trouve alors que \\(\\mathbb{P}(-50&lt;X&lt;100)=F(100)-F(-50)\\approx 0,8069.\\)"
+  },
+  {
+    "objectID": "Examen2.html#question-2",
+    "href": "Examen2.html#question-2",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 2",
+    "text": "Question 2\n\nPartie (a)\nOn lance une pièce de monnaie jusqu’à ce qu’on obtienne face. On note \\(X\\) le nombre de fois où pile a été obtenu. Quelle est l’espérance de \\(X\\)?\n\nSolution 1. L’espérance du nombre d’épreuves nécessaires pour obtenir face une première fois suit une loi géométrique de paramètre \\(\\frac{1}{2}\\). Son espérance est donc de \\(2\\). Par conséquent, le nombre de piles espéré est un de moins, soit \\(1\\).\nSolution 2. D’abord, on constate que pour \\(k\\in\\{0,1,2,\\ldots,\\}, \\mathbb{P}(X=k)=\\frac{1}{2^{k+1}}\\). Ainsi,\n\\[\\begin{align*}\n\\mathbb{E}(X)&=\\sum_{k=0}^{\\infty}k\\cdot \\mathbb{P}(X=k)\\\\[10pt]\n              &=\\sum_{k=1}^{\\infty}k\\cdot \\frac{1}{2^{k+1}}\\\\[10pt]\n              &=\\frac{1}{2}\\sum_{k=1}^{\\infty}k\\cdot\\frac{1}{2^{k}}\\\\[10pt]\n              &=\\frac{1}{2}\\frac{1/2}{(1-1/2)^2}\\\\[10pt]\n              &=1.\n\\end{align*}\\] Au passage, nous avons utilisé la formule \\(\\sum_{k=1}^{\\infty}kx^k=\\frac{x}{(1-x)^2}\\), qui est valable pour \\(|x|&lt;1\\).\n\n\n\nPartie (b)\nOn lance une pièce de monnaie jusqu’à ce qu’on obtienne face pour la dixième fois. On note \\(X\\) le nombre de fois où pile a été obtenu. Que vaut \\(\\mathbb{P}(X=11)\\)?\n\nSolution. La probabilité que \\(X\\) prenne la valeur de \\(11\\) correspond à la probabilité que la dixième occurence de face (qu’on considère comme un succès) survienne lors de la \\(21^{\\text{e}}\\) épreuve. Cela correspond à la probabilité qu’une variable aléatoire suivant une loi binomiale négative de paramètres \\(10\\) et \\(\\frac{1}{2}\\) prenne la valeur \\(21\\). En utilisant la fonction de masse de cette loi, on obtient que\n\\[\\mathbb{P}(X=21)=\\binom{20}{11}\\left(\\frac{1}{2}\\right)^{11}\\left(\\frac{1}{2}\\right)^{10}=\\frac{\\binom{20}{11}}{2^{21}}\\approx 0,0801.\\]"
+  },
+  {
+    "objectID": "Examen2.html#question-3",
+    "href": "Examen2.html#question-3",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 3",
+    "text": "Question 3\n\nPartie (a)\nVous lancez un dé à \\(6\\) faces jusqu’à ce que vous obteniez un \\(5\\). On note \\(X\\) le nombre de lancers nécessaires. Quelle est l’espérance de \\(X\\)?\n\nSolution. \\(X\\) suit une loi géométrique de paramètre \\(1/6\\). Par conséquent, son espérance est \\(6\\).\n\n\n\nPartie (b)\nLe 21 février 2021, on a enregistré un nombre record1 de transactions à la bourse de Montréal. Cette journée-là, \\(1\\,498\\,529\\) ont été effectuées2. Supposons que du nombre, \\(2000\\) transactions impliquaient la compagnie pharmaceutique Pilulorama3. On a identifié au hasard \\(1000\\) transactions effectuées au cours de cette journée pour les analyser, afin de s’assurer qu’il n’y ait pas eu de délit de marché. Estimez, avec une loi de Poisson de paramètre approprié, la probabilité que parmi les \\(1000\\) transactions analysées, il y en ait au moins une impliquant la compagnie Pilulorama.\n\nSolution. Le nombre de transactions choisies étant négligeable par rapport au nombre total de transaction, on peut estimer qu’il y aura en moyenne \\[1000\\cdot\\frac{2000}{1\\,498\\,529}\\approx 1,3346\\] transactions analysées impliquant la compagnie Pilulorama. Ici, \\(n=1000\\) et \\(p=\\frac{2000}{1\\,498\\,529}\\). Ces conditions justifient l’emploi d’une Poisson de paramètre \\(1,3346\\) pour modéliser la situation décrite. Si \\(X\\) correspond au nombre de transactions impliquant la compagnie Pilulorama qui seront analysées, la réponse cherchée est \\[\\mathbb{P}(X&gt;0)=1-\\mathbb{P}(X=0)\\approx 1-\\frac{e^{-1,3346}\\cdot 1,3346^0}{0!}\\approx 0,7367.\\]\n\n\n\nPartie (c)\nAu party de Noël de la compagnie Pilulorama, les employés pigent deux cartes cadeaux dans une urne. Lorsque c’est à votre tour de piger, il reste \\(8\\) cartes cadeaux des Galeries de la Capitale et \\(12\\) cartes cadeaux de la Librairie Pantoute. Quelle est la probabilité que vous pigiez au moins une carte cadeau de la Librairie Pantoute?\n\nSolution. Le nombre de cartes cadeaux de la Librairie Pantoute pigées suit une loi hypergéométrique de paramètres \\(2, 12\\) et \\(8\\). Ainsi, la probabilité d’en piger au moins une correspond à \\[1-\\frac{\\binom{8}{2}\\binom{12}{0}}{\\binom{12+8}{2}}=\\frac{81}{95}\\approx 0,8526.\\]\n\n\n\nPartie (d)\nTrouvez une valeur de \\(a\\) telle que la fonction\n\\[\nf(x)=\\begin{cases}\n        -\\frac{2}{9}x(x-a)& \\text{si $0\\leq x\\leq a$},\\\\\n        0& \\text{sinon}\n        \\end{cases}\n\\] soit une fonction de densité de probabilité.\n\nSolution. Il faut trouver \\(a\\) tel que \\[\\int_{0}^{a}-\\frac{2}{9}x(x-a)\\,dx=1.\\] Après intégration, cette équation devient \\(\\frac{a^3}{27}=1\\). Comme \\(a=3\\) est le seul nombre réel satisfaisant cette équation, la réponse est \\(3\\)."
+  },
+  {
+    "objectID": "Examen2.html#question-4",
+    "href": "Examen2.html#question-4",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 4",
+    "text": "Question 4\n\nPartie (a)\nVrai ou faux : La seule loi de probabilité discrète sans mémoire est la loi de Poisson.\n\nRéponse : Faux, la seule loi de probabilité discrète sans mémoire est la loi géométrique.\n\n\n\nPartie (b)\nVrai ou faux : La seule loi de probabilité absolument continue sans mémoire est la loi exponentielle.\n\nRéponse : Vrai.\n\n\n\nPartie (c)\nVrai ou faux : Soit \\(X\\) une variable aléatoire absolument continue dont la fonction de répartition est \\(F\\) et la fonction de densité \\(f\\). Soit \\(a\\) et \\(b\\) des nombres réels tels que \\(a&lt;b\\). Alors \\[f(a)\\leq f(b).\\]\n\nRéponse : Faux, à titre d’exemple, la fonction de densité d’une variable aléatoire suivant une loi exponentielle de paramètre \\(1\\) prend la valeur \\(e^{-1}\\) en \\(1\\) et la valeur \\(e^{-2}\\) en \\(2\\). On a bien que \\(1&lt;2\\) mais \\(e^{-1}\\not\\leq e^{-2}\\). Notons que si on avait remplacé la fonction de densité par la fonction de répartition, alors l’énoncé aurait été vrai."
+  },
+  {
+    "objectID": "Examen2.html#question-5",
+    "href": "Examen2.html#question-5",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 5",
+    "text": "Question 5\nUn machiniste doit usiner une pièce de tôle en forme de demi-disque. Le diamètre du demi-disque est une variable aléatoire uniforme sur l’intervalle \\(\\left]\\frac{9}{10},\\frac{11}{10}\\right[\\). Ici, les bornes de l’intervalle sont exprimées en mètres. On définit \\(X\\), la variable aléatoire qui correspond à la superficie (en mètres carrés) que peut recouvrir le demi-disque de tôle. Déterminez \\(F_X(x)\\), la fonction de répartition de la variable aléatoire \\(X\\).\n\nSolution. Notons \\(U\\) la v.a. uniforme dont il est question ici. Il nous faudra connaître sa fonction de répartition. La fonction de densité d’une uniforme sur l’intervalle \\(\\left]\\frac{9}{10},\\frac{11}{10}\\right[\\) vaut \\(10/2=5\\) sur \\(\\left]\\frac{9}{10},\\frac{11}{10}\\right[\\) et \\(0\\) ailleurs. On intègre facilement cette fonction, et on trouve que \\[F_U(u)=\\begin{cases}\n        0                   & \\text{si $u\\leq \\frac{9}{10}$},\\\\[10pt]\n        5u-\\frac{9}{2}      & \\text{si $\\frac{9}{10}&lt;u&lt; \\frac{11}{10}$},\\\\[10pt]\n        1                   & \\text{si $u\\geq \\frac{11}{10}$}.\n        \\end{cases}\\] L’aire d’un cercle de rayon \\(r\\) étant \\(\\pi r^2\\), l’aire d’un demi-cercle de diamètre \\(U\\) sera \\(\\frac{\\pi U^2}{8}\\). La valeur minimale que peut prendre \\(X\\) est l’aire d’un demi-disque de rayon \\(\\frac{9}{10}\\), soit \\(\\frac{81\\pi}{800}\\), et sa valeur maximale est l’aire d’un demi-disque de rayon \\(\\frac{11}{10}\\), soit \\(\\frac{121\\pi}{800}\\). Ainsi, pour \\(X\\leq \\frac{81\\pi}{800}\\) on a que \\(F_X(x)=0\\) alors que pour \\(X\\geq \\frac{121\\pi}{800}\\) on a que \\(F_X(x)=1.\\) Pour \\(\\frac{81\\pi}{800}&lt;x&lt;\\frac{121\\pi}{800}\\), nous avons que \\[\\begin{align*}\nF_X(x)&=\\mathbb{P}(X\\leq x)\\\\[10pt]\n      &=\\mathbb{P}\\left(\\frac{\\pi U^2}{8}\\leq x\\right)\\\\[10pt]\n      &=\\mathbb{P}\\left(U^2\\leq \\frac{8x}{\\pi}\\right)\\\\[10pt]\n      &=\\mathbb{P}\\left(|U|\\leq \\sqrt{\\frac{8x}{\\pi}}\\right)\\\\[10pt]\n      &=\\mathbb{P}\\left(-\\sqrt{\\frac{8x}{\\pi}}\\leq U\\leq \\sqrt{\\frac{8x}{\\pi}}\\right)\\\\[10pt]\n      &=\\mathbb{P}\\left(U\\leq \\sqrt{\\frac{8x}{\\pi}}\\right)\\qquad\\text{(car $U$ ne prend pas de valeurs négatives)}\\\\[10pt]\n      &=F_U\\left(\\sqrt{\\frac{8x}{\\pi}}\\right)\\\\[10pt]\n      &=5\\sqrt{\\frac{8x}{\\pi}}-\\frac{9}{2}.\n\\end{align*}\\] Si on résume : \\[F_X(x)=\\begin{cases}\n        0                   & \\text{si $x\\leq \\frac{81\\pi}{800}$},\\\\[10pt]\n        5\\sqrt{\\frac{8x}{\\pi}}-\\frac{9}{2}      & \\text{si $\\frac{81\\pi}{800}&lt;x&lt; \\frac{121\\pi}{800}$},\\\\[10pt]\n        1                   & \\text{si $x\\geq \\frac{121\\pi}{800}$}.\n        \\end{cases}\\]"
+  },
+  {
+    "objectID": "Examen2.html#question-6",
+    "href": "Examen2.html#question-6",
+    "title": "Examen 2 — Solutions",
+    "section": "Question 6",
+    "text": "Question 6\nSoit \\(n\\in\\mathbb{N}^{\\star}\\). Pour les \\(j\\in\\{1,2,\\ldots,n\\}\\), on définit des variables aléatoires (indépendantes) \\(X_j\\) telles que \\[X_j\\sim \\text{exponentielle}\\,(j)\\qquad\\forall~j\\in\\{1,2,\\ldots,n\\}.\\] On définit ensuite la variable aléatoire \\(Y_n\\) de la manière suivante: \\[Y_n=\\min\\{X_1,X_2,\\ldots,X_n\\}.\\]\n\nPartie (a)\nTrouvez la fonction de répartition de \\(Y_n\\) et déduisez-en l’espérance.\n\nComme les \\(X_j\\) prennent toutes des valeurs non négatives, on en déduit que \\(F_{Y_n}(y)=0\\) pour \\(y&lt;0\\). Désignons par \\(F_{X_j}(x)\\) la fonction de répartition de \\(X_j\\). Pour \\(x\\geq 0\\), nous avons que \\[ F_{X_j}(x)=1-e^{jx}.\\] Si on ne se souvient plus de cette fonction, on peut la retrouver en intégrant la fonction de densité de l’exponentielle de paramètre \\(j\\). Nous avons que \\[\\begin{align*}\nF_{Y_n}(y)&=\\mathbb{P}(Y_n\\leq y)\\\\[10pt]\n      &=1-\\mathbb{P}(Y_n&gt; y)\\\\[10pt]\n      &=1-\\mathbb{P}(\\{X_1&gt;y\\}\\cap \\{X_2&gt;y\\}\\cap\\ldots\\cap\\{X_n&gt;y\\})\\\\[10pt]\n      &=1-\\mathbb{P}(\\{X_1&gt;y\\})\\cdot\\mathbb{P}(\\{X_2&gt;y\\})\\cdot\\ldots\\cdot\\mathbb{P}(\\{X_n&gt;y\\})\\\\[10pt]\n      &=1-(1-\\mathbb{P}(\\{X_1\\leq y\\}))\\cdot(1-\\mathbb{P}(\\{X_2\\leq y\\}))\\cdot\\ldots\\cdot(1-\\mathbb{P}(\\{X_n\\leq y\\}))\\\\[10pt]\n      &=1-(1-F_{X_1}(y))\\cdot(1-F_{X_2}(y))\\cdot\\ldots\\cdot(1-F_{X_n}(y))\\\\[10pt]\n      &=1-e^{-y}\\cdot e^{-2y}\\cdot\\ldots\\cdot e^{-ny}\\\\[10pt]\n      &=1-e^{-y(1+2+\\ldots+n)}\\\\[10pt]\n      &=1-e^{-y\\frac{n(n+1)}{2}}.\n\\end{align*}\\] Si on résume, \\[F_{Y_n}(y)=\\begin{cases}\n        0                   & \\text{si $y&lt;0$},\\\\[10pt]\n        1-e^{-y\\frac{n(n+1)}{2}}     & \\text{si $y\\geq 0$}.\n        \\end{cases}\\]\nComme il s’agit de la fonction de répartition d’une exponentielle de paramètre \\(\\frac{n(n+1)}{2}\\), on en déduit que l’espérance de \\(Y_n\\) est \\(\\frac{2}{n(n+1)}\\).\n\n\n\nPartie (b)\nSoit \\(F_n(x)\\) la fonction de répartition de \\(Y_n\\). Dessinez le graphique de la fonction \\(F(x)\\) où \\[F(x)=\\lim_{n\\rightarrow\\infty} F_n(x).\\] Remarque : vous pouvez déduire ce graphique même si vous n’avez pas fait la sous-question (a). Dans tous les cas, justifiez votre raisonnement.\n\nSolution 1. Si vous avez obtenu la fonction de répartition à la sous question précédente, il est facile de constater que \\(F(x)=0\\) pour \\(x&lt;0\\). Maintenant, si on fixe un \\(x\\geq 0\\) et qu’on fait tendre \\(n\\) vers l’infini dans l’expression \\(1-e^{-x\\frac{n(n+1)}{2}}\\), on obtient facilement \\(1\\) comme résultat. Ainsi, \\[F(x)=\\begin{cases}\n        0                   & \\text{si $x&lt;0$},\\\\[10pt]\n        1     & \\text{si $x\\geq 0$}.\n        \\end{cases}\\]\nSolution 2. Puisque \\(Y_n\\leq X_n\\), on en conclut que l’espérance de \\(\\mathbb{E}(Y_n)\\leq \\mathbb{E}(X_n)\\). L’espérance de \\(X_n\\) est \\(1/n\\). C’est donc dire que lorsque \\(n\\) tend vers l’infini, son espérance tend vers \\(0\\). On peut voir la fonction \\(F(x)\\) comme étant la fonction de répartition de la variable aléatoire obtenue en prenant la limite des \\(Y_n\\). La seule façon de construire une fonction de répartition qui vaut \\(0\\) pour des valeurs négatives et qui a une espérance nulle est de concentrer sa masse à l’origine, ce qui mène à la fonction \\(F\\) décrite dans la solution 1.\nDans le jargon de la théorie des probabilités, on dit que la suite de variables aléatoires \\(Y_n\\) converge en loi vers la variable aléatoire \\(Y\\) qui prend la valeur \\(0\\) avec probabilité \\(1\\). C’est donc un exemple d’une suite de variables aléatoires continues qui converge en loi vers une variable aléatoire discrète."
+  },
+  {
+    "objectID": "Examen2.html#footnotes",
+    "href": "Examen2.html#footnotes",
+    "title": "Examen 2 — Solutions",
+    "section": "",
+    "text": "En date du 17 mars 2023.↩︎\nC’est vrai, voir https://m-x.ca/fr/trading/data/market-records.↩︎\nCette compagnie est fictive.↩︎"
+  },
+  {
+    "objectID": "PrepE3.html#question-1",
+    "href": "PrepE3.html#question-1",
+    "title": "Préparation à l’examen 3",
+    "section": "Question 1",
+    "text": "Question 1\nSoit \\(X\\) et \\(Y\\), deux variables aléatoires indépendantes. On supposera que \\(X\\sim \\text{uniforme}\\,(0,1)\\) et que \\(Y\\sim\\text{uniforme}\\,(0,2)\\). On pose \\(Z=X+Y\\). La fonction de densité de \\(Z\\) est de la forme \\[ f_Z(z)=\\begin{cases}\n            \\alpha z&\\text{si $0&lt;z&lt;1$,}\\\\\n            \\frac{1}{2}&\\text{si $1\\leq z&lt;2$,}\\\\\n            \\frac{3}{2}-\\alpha z&\\text{si $2\\leq z&lt;3$.}\n            \\end{cases}\\]\n\nPartie (a)\nTrouvez la valeur de \\(\\alpha\\) dans l’expression de \\(f_Z\\).\n\n\nPartie (b)\nTrouvez l’espérance et la variance de \\(Z\\).\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}(Y\\leq X)\\)."
+  },
+  {
+    "objectID": "PrepE3.html#question-2",
+    "href": "PrepE3.html#question-2",
+    "title": "Préparation à l’examen 3",
+    "section": "Question 2",
+    "text": "Question 2\nSoit \\(Z_1\\) et \\(Z_2\\), deux variables aléatoires indépendantes dont la distribution de probabilités est la loi normale standard. On définit les deux variables aléatoires suivantes : \\(X=\\sqrt{\\lvert Z_1\\rvert}\\) et \\(Y=\\sqrt{\\lvert Z_2 \\rvert}\\).\n\nPartie (a)\nMontrez que la fonction densité conjointe des variables aléatoires \\(X\\) et \\(Y\\) est donnée par \\[f(x,y)=16\\,xy\\,\\varphi(x^2)\\,\\varphi(y^2),\\] où \\(\\varphi\\) est la fonction de densité d’une variable aléatoire suivant la loi normale standard.\n\n\nPartie (b)\nTrouvez la fonction de répartition conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}\\left(\\left\\{X\\geq 0\\right\\}\\cap \\left\\{Y\\geq 0\\right\\}\\right)\\).\n\n\nPartie (d)\nCalculez \\(\\mathbb{P}\\left(X\\geq \\frac{1}{2}\\,\\vert\\, Y\\leq 1\\right)\\)."
+  },
+  {
+    "objectID": "PrepE3.html#question-3",
+    "href": "PrepE3.html#question-3",
+    "title": "Préparation à l’examen 3",
+    "section": "Question 3",
+    "text": "Question 3\nVous lancez une pièce de monnaie \\(100\\) fois. On définit les deux variables aléatoires ci-dessous: \\[\\begin{align*}\n        X&=\\text{Le nombre de fois où la pièce tombe sur pile lors de ces $100$ lancers,}\\\\\n        Y&=\\text{Le nombre de fois où la pièce tombe sur face lors de ces $100$ lancers.}\n    \\end{align*}\\]\n\nPartie (a)\nTrouvez la fonction de masse conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\n\nPartie (b)\nSans l’évaluer, donnez l’expression menant au calcul de la valeur exacte de \\(\\mathbb{P}\\left(45\\leq X &lt;60\\right)\\).\n\n\nPartie (c)\nCalculez chacune des trois probabilités suivantes : \\(\\mathbb{P}\\left(X&lt;Y\\right), \\mathbb{P}\\left(Y&lt;X\\right)\\) et \\(\\mathbb{P}\\left(X=Y\\right)\\).\n\n\nPartie (d)\nCalculez le coefficient de corrélation des variables aléatoires \\(X\\) et \\(Y\\) et déterminez si ces deux variables aléatoires sont indépendantes."
+  },
+  {
+    "objectID": "PrepE3.html#question-4",
+    "href": "PrepE3.html#question-4",
+    "title": "Préparation à l’examen 3",
+    "section": "Question 4",
+    "text": "Question 4\nSoit \\(X_1\\) et \\(X_2\\) des variables aléatoires indépendantes suivant la loi de probabilité uniforme sur l’intervalle \\((0,10)\\). Trouvez l’espérance de \\(Y\\), où \\(Y=\\min\\{X_1,X_2\\}\\)."
+  },
+  {
+    "objectID": "PrepE3-Sol.html#question-1",
+    "href": "PrepE3-Sol.html#question-1",
+    "title": "Préparation à l’examen 3 - Solutions",
+    "section": "Question 1",
+    "text": "Question 1\nSoit \\(X\\) et \\(Y\\), deux variables aléatoires indépendantes. On supposera que \\(X\\sim \\text{uniforme}\\,(0,1)\\) et que \\(Y\\sim\\text{uniforme}\\,(0,2)\\). On pose \\(Z=X+Y\\). La fonction de densité de \\(Z\\) est de la forme \\[ f_Z(z)=\\begin{cases}\n            \\alpha z&\\text{si $0&lt;z&lt;1$,}\\\\\n            \\frac{1}{2}&\\text{si $1\\leq z&lt;2$,}\\\\\n            \\frac{3}{2}-\\alpha z&\\text{si $2\\leq z&lt;3$.}\n            \\end{cases}\\]\n\nPartie (a)\nTrouvez la valeur de \\(\\alpha\\) dans l’expression de \\(f_Z\\).\n\n\n\n\n\nPartie (b)\nTrouvez l’espérance et la variance de \\(Z\\).\n\n\n\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}(Y\\leq X)\\)."
+  },
+  {
+    "objectID": "PrepE3-Sol.html#question-2",
+    "href": "PrepE3-Sol.html#question-2",
+    "title": "Préparation à l’examen 3 - Solutions",
+    "section": "Question 2",
+    "text": "Question 2\nSoit \\(Z_1\\) et \\(Z_2\\), deux variables aléatoires indépendantes dont la distribution de probabilités est la loi normale standard. On définit les deux variables aléatoires suivantes : \\(X=\\sqrt{\\lvert Z_1\\rvert}\\) et \\(Y=\\sqrt{\\lvert Z_2 \\rvert}\\).\n\nPartie (a)\nMontrez que la fonction densité conjointe des variables aléatoires \\(X\\) et \\(Y\\) est donnée par \\[f(x,y)=16\\,xy\\,\\varphi(x^2)\\,\\varphi(y^2),\\] où \\(\\varphi\\) est la fonction de densité d’une variable aléatoire suivant la loi normale standard.\n\n\n\n\n\nPartie (b)\nTrouvez la fonction de répartition conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\nVoir Partie (a).\n\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}\\left(\\left\\{X\\geq 0\\right\\}\\cap \\left\\{Y\\geq 0\\right\\}\\right)\\).\n\n\n\n\n\nPartie (d)\nCalculez \\(\\mathbb{P}\\left(X\\geq \\frac{1}{2}\\,\\vert\\, Y\\leq 1\\right)\\)."
+  },
+  {
+    "objectID": "PrepE3-Sol.html#question-3",
+    "href": "PrepE3-Sol.html#question-3",
+    "title": "Préparation à l’examen 3 - Solutions",
+    "section": "Question 3",
+    "text": "Question 3\nVous lancez une pièce de monnaie \\(100\\) fois. On définit les deux variables aléatoires ci-dessous: \\[\\begin{align*}\n        X&=\\text{Le nombre de fois où la pièce tombe sur pile lors de ces $100$ lancers,}\\\\\n        Y&=\\text{Le nombre de fois où la pièce tombe sur face lors de ces $100$ lancers.}\n    \\end{align*}\\]\n\nPartie (a)\nTrouvez la fonction de masse conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\n\n\n\n\nPartie (b)\nSans l’évaluer, donnez l’expression menant au calcul de la valeur exacte de \\(\\mathbb{P}\\left(45\\leq X &lt;60\\right)\\).\n\n\n\n\n\nPartie (c)\nCalculez chacune des trois probabilités suivantes : \\(\\mathbb{P}\\left(X&lt;Y\\right), \\mathbb{P}\\left(Y&lt;X\\right)\\) et \\(\\mathbb{P}\\left(X=Y\\right)\\).\n\n\n\n\n\nPartie (d)\nCalculez le coefficient de corrélation des variables aléatoires \\(X\\) et \\(Y\\) et déterminez si ces deux variables aléatoires sont indépendantes."
+  },
+  {
+    "objectID": "PrepE3-Sol.html#question-4",
+    "href": "PrepE3-Sol.html#question-4",
+    "title": "Préparation à l’examen 3 - Solutions",
+    "section": "Question 4",
+    "text": "Question 4\nSoit \\(X_1\\) et \\(X_2\\) des variables aléatoires indépendantes suivant la loi de probabilité uniforme sur l’intervalle \\((0,10)\\). Trouvez l’espérance de \\(Y\\), où \\(Y=\\min\\{X_1,X_2\\}\\)."
+  }
+]
