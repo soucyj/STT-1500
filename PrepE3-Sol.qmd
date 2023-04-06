@@ -1,0 +1,116 @@
+# Préparation à l'examen 3 --- Solutions {.unnumbered}
+
+## Question 1
+
+Soit $X$ et $Y$, deux variables aléatoires indépendantes. On supposera que $X\sim \text{uniforme}\,(0,1)$ et que $Y\sim\text{uniforme}\,(0,2)$. On pose $Z=X+Y$. La fonction de densité de $Z$ est de la forme $$ f_Z(z)=\begin{cases}
+            \alpha z&\text{si $0<z<1$,}\\
+            \frac{1}{2}&\text{si $1\leq z<2$,}\\
+            \frac{3}{2}-\alpha z&\text{si $2\leq z<3$.}
+            \end{cases}$$
+
+### Partie (a)
+
+Trouvez la valeur de $\alpha$ dans l'expression de $f_Z$.
+
+::: solutions
+![](images/Q1a.png){width="100%"}
+:::
+
+### Partie (b)
+
+Trouvez l'espérance et la variance de $Z$.
+
+::: solutions
+![](images/Q1b.png){width="100%"}
+:::
+
+### Partie (c)
+
+Calculez $\mathbb{P}(Y\leq X)$.
+
+::: solutions
+![](images/Q1c.png){width="100%"}
+:::
+
+## Question 2
+
+Soit $Z_1$ et $Z_2$, deux variables aléatoires indépendantes dont la distribution de probabilités est la loi normale standard. On définit les deux variables aléatoires suivantes : $X=\sqrt{\lvert Z_1\rvert}$ et $Y=\sqrt{\lvert Z_2 \rvert}$.
+
+### Partie (a)
+
+Montrez que la fonction densité conjointe des variables aléatoires $X$ et $Y$ est donnée par $$f(x,y)=16\,xy\,\varphi(x^2)\,\varphi(y^2),$$ où $\varphi$ est la fonction de densité d'une variable aléatoire suivant la loi normale standard.
+
+::: solutions
+![](images/Q2ab.png){width="100%"}
+:::
+
+### Partie (b)
+
+Trouvez la fonction de répartition conjointe des variables aléatoires $X$ et $Y$.
+
+::: solutions
+Voir Partie (a).
+:::
+
+### Partie (c)
+
+Calculez $\mathbb{P}\left(\left\{X\geq 0\right\}\cap \left\{Y\geq 0\right\}\right)$.
+
+::: solutions
+![](images/Q2c.png){width="100%"}
+:::
+
+### Partie (d)
+
+Calculez $\mathbb{P}\left(X\geq \frac{1}{2}\,\vert\, Y\leq 1\right)$.
+
+::: solutions
+![](images/Q2d.png){width="100%"}
+:::
+
+## Question 3
+
+Vous lancez une pièce de monnaie $100$ fois. On définit les deux variables aléatoires ci-dessous: \begin{align*}
+        X&=\text{Le nombre de fois où la pièce tombe sur pile lors de ces $100$ lancers,}\\
+        Y&=\text{Le nombre de fois où la pièce tombe sur face lors de ces $100$ lancers.}
+    \end{align*}
+
+### Partie (a)
+
+Trouvez la fonction de masse conjointe des variables aléatoires $X$ et $Y$.
+
+::: solutions
+![](images/Q3a.png){width="100%"}
+:::
+
+### Partie (b)
+
+Sans l'évaluer, donnez l'expression menant au calcul de la valeur exacte de $\mathbb{P}\left(45\leq X <60\right)$.
+
+::: solutions
+![](images/Q3b.png){width="100%"}
+:::
+
+### Partie (c)
+
+Calculez chacune des trois probabilités suivantes : $\mathbb{P}\left(X<Y\right), \mathbb{P}\left(Y<X\right)$ et $\mathbb{P}\left(X=Y\right)$.
+
+::: solutions
+![](images/Q3c.png){width="100%"}
+:::
+
+### Partie (d)
+
+Calculez le coefficient de corrélation des variables aléatoires $X$ et $Y$ et déterminez si ces deux variables aléatoires sont indépendantes.
+
+::: solutions
+![](images/Q3d.png){width="100%"}
+:::
+
+## Question 4
+
+Soit $X_1$ et $X_2$ des variables aléatoires indépendantes suivant la loi de probabilité uniforme sur l'intervalle $(0,10)$. Trouvez l'espérance de $Y$, où $Y=\min\{X_1,X_2\}$.
+
+::: solutions
+![](images/Q4.png){width="100%"}
+:::
