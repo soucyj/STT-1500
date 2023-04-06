@@ -86,28 +86,28 @@
   {
     "objectID": "PrepE3-Sol.html#question-1",
     "href": "PrepE3-Sol.html#question-1",
-    "title": "Préparation à l’examen 3 - Solutions",
+    "title": "Préparation à l’examen 3 — Solutions",
     "section": "Question 1",
     "text": "Question 1\nSoit \\(X\\) et \\(Y\\), deux variables aléatoires indépendantes. On supposera que \\(X\\sim \\text{uniforme}\\,(0,1)\\) et que \\(Y\\sim\\text{uniforme}\\,(0,2)\\). On pose \\(Z=X+Y\\). La fonction de densité de \\(Z\\) est de la forme \\[ f_Z(z)=\\begin{cases}\n            \\alpha z&\\text{si $0&lt;z&lt;1$,}\\\\\n            \\frac{1}{2}&\\text{si $1\\leq z&lt;2$,}\\\\\n            \\frac{3}{2}-\\alpha z&\\text{si $2\\leq z&lt;3$.}\n            \\end{cases}\\]\n\nPartie (a)\nTrouvez la valeur de \\(\\alpha\\) dans l’expression de \\(f_Z\\).\n\n\n\n\n\nPartie (b)\nTrouvez l’espérance et la variance de \\(Z\\).\n\n\n\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}(Y\\leq X)\\)."
   },
   {
     "objectID": "PrepE3-Sol.html#question-2",
     "href": "PrepE3-Sol.html#question-2",
-    "title": "Préparation à l’examen 3 - Solutions",
+    "title": "Préparation à l’examen 3 — Solutions",
     "section": "Question 2",
     "text": "Question 2\nSoit \\(Z_1\\) et \\(Z_2\\), deux variables aléatoires indépendantes dont la distribution de probabilités est la loi normale standard. On définit les deux variables aléatoires suivantes : \\(X=\\sqrt{\\lvert Z_1\\rvert}\\) et \\(Y=\\sqrt{\\lvert Z_2 \\rvert}\\).\n\nPartie (a)\nMontrez que la fonction densité conjointe des variables aléatoires \\(X\\) et \\(Y\\) est donnée par \\[f(x,y)=16\\,xy\\,\\varphi(x^2)\\,\\varphi(y^2),\\] où \\(\\varphi\\) est la fonction de densité d’une variable aléatoire suivant la loi normale standard.\n\n\n\n\n\nPartie (b)\nTrouvez la fonction de répartition conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\nVoir Partie (a).\n\n\n\nPartie (c)\nCalculez \\(\\mathbb{P}\\left(\\left\\{X\\geq 0\\right\\}\\cap \\left\\{Y\\geq 0\\right\\}\\right)\\).\n\n\n\n\n\nPartie (d)\nCalculez \\(\\mathbb{P}\\left(X\\geq \\frac{1}{2}\\,\\vert\\, Y\\leq 1\\right)\\)."
   },
   {
     "objectID": "PrepE3-Sol.html#question-3",
     "href": "PrepE3-Sol.html#question-3",
-    "title": "Préparation à l’examen 3 - Solutions",
+    "title": "Préparation à l’examen 3 — Solutions",
     "section": "Question 3",
     "text": "Question 3\nVous lancez une pièce de monnaie \\(100\\) fois. On définit les deux variables aléatoires ci-dessous: \\[\\begin{align*}\n        X&=\\text{Le nombre de fois où la pièce tombe sur pile lors de ces $100$ lancers,}\\\\\n        Y&=\\text{Le nombre de fois où la pièce tombe sur face lors de ces $100$ lancers.}\n    \\end{align*}\\]\n\nPartie (a)\nTrouvez la fonction de masse conjointe des variables aléatoires \\(X\\) et \\(Y\\).\n\n\n\n\n\nPartie (b)\nSans l’évaluer, donnez l’expression menant au calcul de la valeur exacte de \\(\\mathbb{P}\\left(45\\leq X &lt;60\\right)\\).\n\n\n\n\n\nPartie (c)\nCalculez chacune des trois probabilités suivantes : \\(\\mathbb{P}\\left(X&lt;Y\\right), \\mathbb{P}\\left(Y&lt;X\\right)\\) et \\(\\mathbb{P}\\left(X=Y\\right)\\).\n\n\n\n\n\nPartie (d)\nCalculez le coefficient de corrélation des variables aléatoires \\(X\\) et \\(Y\\) et déterminez si ces deux variables aléatoires sont indépendantes."
   },
   {
     "objectID": "PrepE3-Sol.html#question-4",
     "href": "PrepE3-Sol.html#question-4",
-    "title": "Préparation à l’examen 3 - Solutions",
+    "title": "Préparation à l’examen 3 — Solutions",
     "section": "Question 4",
     "text": "Question 4\nSoit \\(X_1\\) et \\(X_2\\) des variables aléatoires indépendantes suivant la loi de probabilité uniforme sur l’intervalle \\((0,10)\\). Trouvez l’espérance de \\(Y\\), où \\(Y=\\min\\{X_1,X_2\\}\\)."
   }
